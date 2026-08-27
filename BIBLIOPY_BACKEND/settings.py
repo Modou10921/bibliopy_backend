@@ -124,6 +124,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOWED_ORIGINS = [
+    "https://bibliopy-frontend.onrender.com",  # Remplacez par votre URL exacte Render
     "http://localhost:4200",
 ]
 
