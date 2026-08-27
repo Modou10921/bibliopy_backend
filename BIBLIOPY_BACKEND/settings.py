@@ -56,6 +56,30 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# 2. Configuration CORS permissive pour valider les requêtes preflight
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+# Ne pas restreindre les méthodes HTTP
+from corsheaders.defaults import default_methods, default_headers
+CORS_ALLOW_METHODS = list(default_methods) + [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'accept',
+    'authorization',
+    'content-type',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+] 
+
 ROOT_URLCONF = 'BIBLIOPY_BACKEND.urls'
 
 TEMPLATES = [
