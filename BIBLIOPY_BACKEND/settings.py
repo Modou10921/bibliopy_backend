@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!^5rterokpcts1=-4gdu^33l64n753gt+19y(o9bnd(f@r1iak
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bibliopy-backend.onrender.com', 'localhost', '127.0.0.1', '*']
 
 
 # Application definition
