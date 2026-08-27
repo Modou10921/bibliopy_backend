@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # À AJOUTER ICI
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # PLACÉ ICI AVEC LES GUILLEMETS ET LA VIRGULE
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -148,3 +149,4 @@ REST_FRAMEWORK = {
 }
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
